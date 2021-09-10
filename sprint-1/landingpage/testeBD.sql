@@ -15,3 +15,5 @@ SHOW indexes from users;
 drop table users;
 
 SHOW columns from users;
+
+SEECT * FROM users;
