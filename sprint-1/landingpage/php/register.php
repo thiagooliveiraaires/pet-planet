@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])){
                         $error .= '<p class="error">As senhas não correspondem.</p>';
                     }
                 }
-                if (empty(error)) {
+                if (empty($error)) {
                     $insertQuery = $db->prepare("INSERT INTO users (nome, nome_bixo, email, senha) VALUES (?, ?, ?, ?);");
                     $insertQuery->bind_param("ssss", $fullname, $fullname_bixo, $email, $password_hash);
                     $result = $insertQuery->execute();
